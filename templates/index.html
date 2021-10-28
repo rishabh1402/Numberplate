@@ -1,44 +1,157 @@
-{% extends 'layout.html' %}
+<html>
 
-{% block body %}
-    <div class="container">
-        <br><br>
-        <form action="#" method="POST" enctype="multipart/form-data">
-            <div class="input-group">
-                <input type="file" class="form-control" name="image_name" required>
-                <input type="submit" value="Upload" class="btn btn-outline-secondary">
-            </div>
-        </form>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://github.com/cool-man-vk/Stratify/blob/main/style.css">
+        <!--Bootstrap css-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <title>Stratify- a Waste Classifier</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+		
+		<style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); 
+            * 
+            {
+                font-family: Poppins,'sans-serif';
+            }
+			.content {
+			  max-width: 500px;
+			  margin: auto;
+			  }
+			.bg-img{
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+            .bg-img,.content 
+            {
+                overflow: auto;
+            }	
+            .index-main 
+            {
+                background-color: white;
+                padding:20px;
+                display: flex; 
+                flex-direction: column;
+                align-items: center; 
+                justify-content: center;
+                margin-top: 75px;
+            }	
+            .upload-section 
+            {
+               padding:10px;
+            }	
+            .btn.btn-success  
+            {
+                width:60%;
+                margin-left:20%;
+                margin-right:20%;
+            } 
+            @media (max-width:543px) {
+                .index-main 
+                {
+                    width:94%;
+                    margin-left: 3%; 
+                    margin-right: 3%; 
+                }
+            }
+            #output
+            {
+                width:200px;
+                height:200px; 
+                background-image: url('static/images/default.png');
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
 
-    {% if upload %}
-        <div class="container">
-            <br><br>
-            <table>
-                <tr>
-                    <td>
-                        <img class="rounded float-left img-fluid" src="/static/upload/{{ upload_image }}" alt="">
-                    </td>
-                </tr>
-
-            </table>
-            <br>
-            <table style="border: solid black; width: 100%;">
-                <tr style="border: solid black;">
-                    <th>Text</th>
-                </tr>
-                <tr style="border: solid black;">
-                    <td style="background-color: greenyellow;">
-                        <h1 class="display-8"> {{ text_h }}</h1>
-                    </td>
-
-                </tr>
-            </table>
-
+            }
+            .navbar-nav 
+            {
+                margin-left: auto;
+            }
+            .nav-link
+            {
+                font-size:20px;
+                margin-left:20px;
+                margin-right:20px;
+                color: white !important;
+                text-align: center;
+                transition: color .4s !important;
+            }
+            .nav-link:hover 
+            {
+                color:orangered !important;
+            }
+            @media (max-width:991px) {
+                .nav-link 
+                {
+                    padding: 20px !important;
+                }
+            }
+        </style>    
+    </head>
+	
+    <body>
+	<div class="bg-img">
+        <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://cool-man-vk.github.io/Stratify/">Stratify</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://cool-man-vk.github.io/Stratify/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://cool-man-vk.github.io/Stratify/#about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://cool-man-vk.github.io/Stratify/#stack">Stack</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    
-    
-    
-    {% endif %}
+      </nav>
+      <!--end--> 
+	    <div class="content">
+            <div class = "index-main">
 
-{% endblock  %}
+                <div style = "width : 100%; padding-top : 5%;">
+                    <div class = "header-content">
+                        <h1 style = "text-align: center;color: black"><span class="header-content-text">Please upload an image</span></h1>
+                    </div>
+                </div>
+                <p><img id="output" width="200px"></p>
+                <div class="upload-section">
+                    
+                    <div class="upload-file">
+                        <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                            <input class="file-form-input" type="file" , name = "file" onchange="loadFile(event)"/> 
+                    <br><br>
+                            <button class="btn btn-success btn-lg">Upload</button>
+                </form>
+                    </div>
+                   
+    <script>
+        var loadFile = function(event) {
+            document.getElementById('output').style.backgroundImage = "none";
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        function getResult(result){
+            result_box = document.getElementById('result');
+            result_box.innerHTML = result;
+            result_box.style.display = "block";
+        }
+    </script>		 
+    </body>
+</html> 
