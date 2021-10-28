@@ -57,20 +57,22 @@ def number_plate(path,filename):
     res = cv2.rectangle(img, tuple(approx[0][0]), tuple(approx[2][0]), (0,255,0),3)
     return text
     
+
 @app.route('/')
 def home():
         return render_template("index.html")
-
-@app.route('/' , methods = ['GET' , 'POST'])
-def index():
+    
+@app.route('/success' , methods = ['GET' , 'POST'])
+def success():
   if request.method == 'POST':
-    upload_file = request.files['image_name']
+    upload_file = request.files['file']
     filename = upload_file.filename
     path_save = os.path.join(UPLOAD_PATH,filename)
     upload_file.save(path_save)
-    text_i = number_plate(path_save,filename)
+    text = number_plate(path_save,filename)
 
-    return render_template('index.html', text_h=text_i)
+    return render_template('success.html',img=filename, text_h=text)
+  return render_template('index.html',upload=False)
 
 if __name__ == "__main__":
     app.run(debug=True)
