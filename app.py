@@ -11,7 +11,7 @@ from flask import Flask , render_template  , request , send_file
 
 app = Flask(__name__,template_folder='templates')
 BASE_PATH = os.getcwd()
-UPLOAD_PATH = os.path.join(BASE_PATH,'upload/')
+UPLOAD_PATH = os.path.join(BASE_PATH,'static/upload/')
 
 def number_plate(path,filename):
     img = cv2.imread(path)
