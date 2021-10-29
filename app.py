@@ -1,17 +1,12 @@
-import easyocr
-easyocr.__version__
 import io
 import os
 from flask import Flask, render_template, redirect, url_for, Response, request, session
-import urllib
 import cv2
 from matplotlib import pyplot as plt
 from matplotlib.figure import Figure
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import numpy as np
 import imutils
 import easyocr
-from PIL import Image
 from flask import Flask , render_template  , request , send_file
 
 app = Flask(__name__,template_folder='templates')
