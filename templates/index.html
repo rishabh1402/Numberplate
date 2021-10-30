@@ -1,49 +1,45 @@
-<html>
+<!doctype html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://github.com/cool-man-vk/Stratify/blob/main/style.css">
-        <!--Bootstrap css-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <title>Stratify- a Waste Classifier</title>
-        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
-		
-		<style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); 
-            * 
-            {
-                font-family: Poppins,'sans-serif';
-            }
-			.content {
-			  max-width: 500px;
-			  margin: auto;
-			  }
-			.bg-img{
-				width: 100%;
-				height: 100vh;
-				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
-				background-size: cover;
-				background-position: center;
-			}
-            .bg-img,.content 
-            {
-                overflow: auto;
-            }	
-            .index-main 
-            {
-                background-color: white;
-                padding:20px;
-                display: flex; 
-                flex-direction: column;
-                align-items: center; 
-                justify-content: center;
-                margin-top: 75px;
-            }	
-            .upload-section 
+<html class="no-js" lang="">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PAGE NAME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!--Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets1/css/iconfont.css">
+    <link rel="stylesheet" href="assets1/css/slick/slick.css">
+    <link rel="stylesheet" href="assets1/css/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets1/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets1/css/bootstrap.css">
+    <link rel="stylesheet" href="assets1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets1/css/magnific-popup.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> 
+    <!--<link rel="stylesheet" href="assets1/css/bootstrap-theme.min.css">-->
+
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="assets1/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="assets1/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="assets1/css/responsive.css" />
+    <style type="text/css">
+        .upload-section 
             {
                padding:10px;
             }	
@@ -53,14 +49,6 @@
                 margin-left:20%;
                 margin-right:20%;
             } 
-            @media (max-width:543px) {
-                .index-main 
-                {
-                    width:94%;
-                    margin-left: 3%; 
-                    margin-right: 3%; 
-                }
-            }
             #output
             {
                 width:200px;
@@ -71,76 +59,139 @@
                 background-repeat: no-repeat; 
 
             }
-            .navbar-nav 
-            {
-                margin-left: auto;
-            }
-            .nav-link
-            {
-                font-size:20px;
-                margin-left:20px;
-                margin-right:20px;
-                color: white !important;
-                text-align: center;
-                transition: color .4s !important;
-            }
-            .nav-link:hover 
-            {
-                color:orangered !important;
-            }
-            @media (max-width:991px) {
-                .nav-link 
-                {
-                    padding: 20px !important;
-                }
-            }
-        </style>    
-    </head>
-	
-    <body>
-	<div class="bg-img">
-        <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="https://cool-man-vk.github.io/Stratify/">Stratify</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://cool-man-vk.github.io/Stratify/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://cool-man-vk.github.io/Stratify/#about">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://cool-man-vk.github.io/Stratify/#stack">Stack</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!--end--> 
-	    <div class="content">
-            <div class = "index-main">
+    </style>    
 
-                <div style = "width : 100%; padding-top : 5%;">
-                    <div class = "header-content">
-                        <h1 style = "text-align: center;color: black"><span class="header-content-text">Please upload an image</span></h1>
+    <script src="assets1/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse">
+
+    <div class='preloader'>
+        <div class='loaded'>&nbsp;</div>
+    </div>
+    <div class="culmn">
+        <header id="main_menu" class="header navbar-fixed-top">
+            <div class="main_menu_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="nave_menu">
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="#home">
+                                           <h2>RULES ARE RULES</h2>
+                                        </a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="#home">HOME</a></li>
+                                            <li><a href="">Data of NP</a></li>
+                                            <li><a href="#contact">CONTACT</a></li>
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <!--End of header -->
+
+
+
+
+       <!--home Section -->
+       <section id="home" class="home">
+        <div class="overlay">
+                <div class="container">
+
+                    <div style = "width : 100%; padding-top : 5%;">
+                        <div class = "header-content">
+                            <h1 style = "text-align: center;color: black"><span class="header-content-text">Please upload an image</span></h1>
+                        </div>
+                    </div>
+                    <p><img id="output" width="200px"></p>
+                    <div class="upload-section">
+                
+                        <div class="upload-file">
+                            <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                                <input class="file-form-input" type="file" , name = "file" onchange="loadFile(event)"/> 
+                                <br><br>
+                                <button class="btn btn-success btn-lg">Upload</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <p><img id="output" width="200px"></p>
-                <div class="upload-section">
-                    
-                    <div class="upload-file">
-                        <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
-                            <input class="file-form-input" type="file" , name = "file" onchange="loadFile(event)"/> 
-                    <br><br>
-                            <button class="btn btn-success btn-lg">Upload</button>
-                </form>
+            </div> 
+        </section>
+        <!--End of home section -->
+
+
+        
+
+
+
+    </div>
+
+
+    <!-----FOOTER----->
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-4 item">
+                        <h3 style="color: black;">Services</h3>
+                        <ul>
+                            <li><a href="#">Number Plate detection</a></li>
+                            <li><a href="#">Face detection</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
                     </div>
-                   
+                    <div class="col-sm-4 col-md-4 item">
+                        <h3 style="color: black;">About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Debuggers © 2021</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-----End Of Footer --------->
+
+    <!-- START SCROLL TO TOP  -->
+
+    <div class="scrollup">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
     <script>
         var loadFile = function(event) {
             document.getElementById('output').style.backgroundImage = "none";
@@ -152,6 +203,23 @@
             result_box.innerHTML = result;
             result_box.style.display = "block";
         }
-    </script>		 
-    </body>
-</html> 
+    </script>
+    <script src="assets1/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="assets1/js/vendor/bootstrap.min.js"></script>
+
+    <script src="assets1/js/jquery.magnific-popup.js"></script>
+    <script src="assets1/js/jquery.mixitup.min.js"></script>
+    <script src="assets1/js/jquery.easing.1.3.js"></script>
+    <script src="assets1/js/jquery.masonry.min.js"></script>
+
+    <!--slick slide js -->
+    <script src="assets1/css/slick/slick.js"></script>
+    <script src="assets1/css/slick/slick.min.js"></script>
+
+
+    <script src="assets1/js/plugins.js"></script>
+    <script src="assets1/js/main.js"></script>
+
+</body>
+
+</html>
