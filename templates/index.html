@@ -17,27 +17,27 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="assets1/css/iconfont.css">
-    <link rel="stylesheet" href="assets1/css/slick/slick.css">
-    <link rel="stylesheet" href="assets1/css/slick/slick-theme.css">
-    <link rel="stylesheet" href="assets1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets1/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets1/css/bootstrap.css">
-    <link rel="stylesheet" href="assets1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets1/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/jquery.fancybox.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/magnific-popup.css') }}">
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> 
     <!--<link rel="stylesheet" href="assets1/css/bootstrap-theme.min.css">-->
 
 
     <!--For Plugins external css-->
-    <link rel="stylesheet" href="assets1/css/plugins.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/plugins.css') }}">
 
     <!--Theme custom css -->
-    <link rel="stylesheet" href="assets1/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/style.css') }}">
 
     <!--Theme Responsive css-->
-    <link rel="stylesheet" href="assets1/css/responsive.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/css/responsive.css') }}">
     <style type="text/css">
         .upload-section 
             {
@@ -61,7 +61,7 @@
             }
     </style>    
 
-    <script src="assets1/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -204,21 +204,22 @@
             result_box.style.display = "block";
         }
     </script>
-    <script src="assets1/js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="assets1/js/vendor/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery-1.11.2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+    
 
-    <script src="assets1/js/jquery.magnific-popup.js"></script>
-    <script src="assets1/js/jquery.mixitup.min.js"></script>
-    <script src="assets1/js/jquery.easing.1.3.js"></script>
-    <script src="assets1/js/jquery.masonry.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.masonry.min.js') }}"></script>
 
     <!--slick slide js -->
-    <script src="assets1/css/slick/slick.js"></script>
-    <script src="assets1/css/slick/slick.min.js"></script>
+    <script src="{{ url_for('static', filename='css/slick/slick.js') }}"></script> 
+    <script src="{{ url_for('static', filename='css/slick/slick.min.js') }}"></script>
 
 
-    <script src="assets1/js/plugins.js"></script>
-    <script src="assets1/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 
