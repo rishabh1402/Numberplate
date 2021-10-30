@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result page</title>
+    
+    <style>
+        table{
+           margin: 20px;
+          border-radius: 5px;
+           min-width: 50%;
+           font-size: 18px;
+           font-family: "Maiandra GD";
+        }
+        th{
+            background-color: #fff48f;
+            border: 2px solid white ;
+            text-transform: uppercase;
+            color: tomato;
+        }
+        td{
+            border-collapse: collapse;
+            border: 2px solid white ;
+            padding: 10px;
+            background-color: #96D4D4;
+        }
+         
+
+
+    </style>
+</head>
+<body>
+
+
+
+<!-- html of python file  -->
+
+
+
+<!-- end -->
+
+
+<!-- we want to push number plate number in below inputs -->
+<!-- <div id="vecid">{{ text_h }}</div> -->
+    <center><input type="text" id="vecid" value= "{{ text }}" disabled >
+    <input type="submit" onclick="getdetails();" value="Submit"></center>
+<!-- Dont Change Anything Below  -->
+    <section class="vechicle">
+           <center><table id="details" ></table></center>       
+     </section>
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>
