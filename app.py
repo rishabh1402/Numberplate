@@ -65,7 +65,7 @@ def success():
     upload_file.save(path_save)
     text = number_plate(path_save,filename)
 
-    return render_template('success.html',img=filename, text_h=text)
+    return render_template('data.html',text=text)
   return render_template('index.html',upload=False)
 
 if __name__ == "__main__":
