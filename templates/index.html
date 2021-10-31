@@ -39,22 +39,38 @@
     <!--Theme Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}">
     <style type="text/css">
-        .header-content
-        {
+        .form-container {
             max-width: 500px;
-			margin: auto;
-        }
-        .upload-section 
-            {
-               padding:10px;
-            }	
-            .btn.btn-success  
-            {
-                width:60%;
-                margin-left:20%;
-                margin-right:20%;
-            } 
-            #output
+            margin: auto;
+            }
+          .index-main 
+          {
+              background-color: white;
+              padding:20px;
+              display: flex; 
+              flex-direction: column;
+              align-items: center; 
+              justify-content: center;
+              margin-top: 75px;
+          }
+          .header-content
+          {
+              margin-bottom: 10%;
+          }	
+          .upload-section 
+          {
+            padding:10px;
+          }
+          .upload-file
+          {
+            width: 170px;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            text-align: center;
+            align-items: center; 
+            justify-content: center;
+          }
+          #output
             {
                 width:200px;
                 height:200px; 
@@ -64,6 +80,11 @@
                 background-repeat: no-repeat; 
 
             }
+
+          .btn.btn-success  
+          {
+            width: 170px;
+          } 
     </style>    
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
@@ -128,14 +149,14 @@
        <!--home Section -->
        <section id="home" class="home">
         <div class="overlay">
-                <div class="container">
-                    <center>
+                <div class="form-container">
+                    <div class="index-main">
+
                     <div style = "width : 100%; padding-top : 5%;">
                         <div class = "header-content">
-                            <h3 style = "text-align: center;color: black"><span class="header-content-text">Please upload an image</span></h3>
+                            <h3 style = "text-align: center;color: black"><span class="header-content-text">Please upload the image</span></h3>
                         </div>
                     </div>
-			</center>		    
                     <p><img id="output" width="200px"></p>
                     <div class="upload-section">
                 
@@ -148,7 +169,9 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+            </div>
+        </div>     
         </section>
         <!--End of home section -->
 
